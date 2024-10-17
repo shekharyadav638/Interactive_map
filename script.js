@@ -84,11 +84,11 @@ function removeMarkers(categoryName) {
 
 function showDetails(location) {
   //console.log("showDetails called for:", location.name);
-
   const sidebar = document.getElementById("details-sidebar");
   sidebar.classList.add("active");
 
   console.log("Active class added:", sidebar.classList.contains("active"));
+
   document.getElementById("location-title").innerText = location.name;
   document.getElementById("location-info").innerText = location.info;
   document.getElementById("location-image").src = location.image;
