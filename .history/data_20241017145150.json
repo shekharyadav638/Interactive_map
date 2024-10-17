@@ -1,0 +1,62 @@
+{
+    "categories": [
+      {
+        "name": "shopping",
+        "locations": [
+          {
+            "name": "Mall of India",
+            "lat": 28.5672,
+            "lon": 77.3206,
+            "info": "Largest mall in India.",
+            "image": "mall.jpg"
+          },
+          {
+            "name": "Dilli Haat",
+            "lat": 28.5686,
+            "lon": 77.2067,
+            "info": "Cultural shopping destination.",
+            "image": "haat.jpg"
+          },
+            {
+                "name": "Sarojini Nagar Market",
+                "lat": 28.5748,
+                "lon": 77.2044,
+                "info": "Famous street market.",
+                "image": "sarojini.jpg"
+            },
+            {
+                "name": "Connaught Place",
+                "lat": 28.6315,
+                "lon": 77.2167,
+                "info": "Popular shopping destination.",
+                "image": "cp.jpg"
+            }
+        ]
+      },
+      {
+        "name": "attractions",
+        "locations": [
+          {
+            "name": "India Gate",
+            "lat": 28.6129,
+            "lon": 77.2295,
+            "info": "War memorial.",
+            "image": "indiagate.jpg"
+          }
+        ]
+      },
+      {
+        "name": "adventure",
+        "locations": [
+          {
+            "name": "Adventure Park",
+            "lat": 28.4595,
+            "lon": 77.0266,
+            "info": "Fun adventure activities.",
+            "image": "park.jpg"
+          }
+        ]
+      }
+    ]
+  }
+  

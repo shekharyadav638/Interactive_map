@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+  }
+  
+  .container {
+    display: flex;
+    width: 100%;
+  }
+  
+  .sidebar {
+    align-content: center;
+    width: 10%;
+    background-color: #f0f0f0;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+  }
+  
+  #map {
+    width: 90%;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .details-sidebar {
+    width: 30%;
+    background-color: #fff;
+    padding: 20px;
+    position: absolute;
+    right: -30%;
+    top: 0;
+    height: 100%;
+    transition: right 0.3s;
+    overflow-y: auto;
+  }
+  
+  .details-sidebar.active {
+    right: 0;
+  }
+  
+  label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  

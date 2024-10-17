@@ -1,0 +1,172 @@
+{
+    "categories": [
+      {
+        "name": "shopping",
+        "locations": [
+          {
+            "name": "Mall of India",
+            "lat": 28.5672,
+            "lon": 77.3206,
+            "info": "Largest mall in India.",
+            "image": "mall.jpg"
+          },
+          {
+            "name": "Dilli Haat",
+            "lat": 28.5686,
+            "lon": 77.2067,
+            "info": "Cultural shopping destination.",
+            "image": "haat.jpg"
+          },
+            {
+                "name": "Sarojini Nagar Market",
+                "lat": 28.5748,
+                "lon": 77.2044,
+                "info": "Famous street market.",
+                "image": "sarojini.jpg"
+            },
+            {
+                "name": "Connaught Place",
+                "lat": 28.6315,
+                "lon": 77.2167,
+                "info": "Popular shopping destination.",
+                "image": "cp.jpg"
+            },
+            {
+                "name": "Chandni Chowk",
+                "lat": 28.6506,
+                "lon": 77.2305,
+                "info": "Oldest market in Delhi.",
+                "image": "chandni.jpg"
+            },
+            {
+                "name": "Lajpat Nagar",
+                "lat": 28.5677,
+                "lon": 77.2410,
+                "info": "Famous for clothes and accessories.",
+                "image": "lajpat.jpg"
+            },
+            {
+                "name": "Khan Market",
+                "lat": 28.6006,
+                "lon": 77.2270,
+                "info": "High-end shopping destination.",
+                "image": "khan.jpg"
+            },
+            {
+                "name": "Karol Bagh",
+                "lat": 28.6526,
+                "lon": 77.1896,
+                "info": "Famous for bridal wear.",
+                "image": "karol.jpg"
+            }
+        ]
+      },
+      {
+        "name": "attractions",
+        "locations": [
+          {
+            "name": "India Gate",
+            "lat": 28.6129,
+            "lon": 77.2295,
+            "info": "War memorial.",
+            "image": "indiagate.jpg"
+          },
+            {
+                "name": "Qutub Minar",
+                "lat": 28.5245,
+                "lon": 77.1855,
+                "info": "Tallest brick minaret.",
+                "image": "qutub.jpg"
+            },
+            {
+                "name": "Red Fort",
+                "lat": 28.6562,
+                "lon": 77.2410,
+                "info": "Historic fort.",
+                "image": "redfort.jpg"
+            },
+            {
+                "name": "Lotus Temple",
+                "lat": 28.5535,
+                "lon": 77.2588,
+                "info": "Bahá'í House of Worship.",
+                "image": "lotus.jpg"
+            },
+            {
+                "name": "Akshardham Temple",
+                "lat": 28.6127,
+                "lon": 77.2773,
+                "info": "Hindu temple.",
+                "image": "akshardham.jpg"
+            }
+        ]
+      },
+      {
+        "name": "adventure",
+        "locations": [
+          {
+            "name": "Adventure Park",
+            "lat": 28.4595,
+            "lon": 77.0266,
+            "info": "Fun adventure activities.",
+            "image": "park.jpg"
+          },
+            {
+                "name": "Flyboy Air Safari",
+                "lat": 28.4217,
+                "lon": 77.0393,
+                "info": "Paramotoring adventure.",
+                "image": "flyboy.jpg"
+            },
+            {
+                "name": "Damdama Lake",
+                "lat": 28.3644,
+                "lon": 77.0405,
+                "info": "Adventure sports.",
+                "image": "damdama.jpg"
+            }
+        ]
+      },
+        {
+            "name": "food",
+            "locations": [
+            {
+                "name": "Indian Accent",
+                "lat": 28.5917,
+                "lon": 77.2263,
+                "info": "Fine dining restaurant.",
+                "image": "indian.jpg"
+            },
+                {
+                    "name": "Karim's",
+                    "lat": 28.6495,
+                    "lon": 77.2334,
+                    "info": "Famous for Mughlai cuisine.",
+                    "image": "karim.jpg"
+                },
+                {
+                    "name": "Pandara Road",
+                    "lat": 28.6075,
+                    "lon": 77.2334,
+                    "info": "Famous for North Indian food.",
+                    "image": "pandara.jpg"
+                },
+                {
+                    "name": "Saravana Bhavan",
+                    "lat": 28.6325,
+                    "lon": 77.2202,
+                    "info": "South Indian restaurant.",
+                    "image": "saravana.jpg"
+                },
+                {
+                    "name": "Kake Di Hatti",
+                    "lat": 28.6583,
+                    "lon": 77.2300,
+                    "info": "Famous for North Indian food.",
+                    "image": "kake.jpg"
+                }
+            ]
+        }
+    ]
+  }
+  

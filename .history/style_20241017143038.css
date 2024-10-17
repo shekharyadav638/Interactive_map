@@ -1,0 +1,36 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #map {
+    width: 60%;  
+    height: 100vh; 
+    float: right;
+  }
+  
+  .sidebar {
+    width: 20%;
+    height: 100vh;
+    overflow-y: auto;
+    float: left;
+    background-color: #f0f0f0;
+    padding: 10px;
+  }
+  
+  .details-sidebar {
+    width: 20%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: -20%;
+    background-color: white;
+    transition: right 0.3s;
+    padding: 20px;
+  }
+  
+  .details-sidebar.active {
+    right: 0;
+  }
+  

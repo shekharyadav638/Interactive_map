@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Map</title>
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVjZVh5ox9i-BEgv_rnizdiXnDA1OzQws&callback=console.debug&libraries=maps,marker&v=beta"
+    ></script>
+    <style>
+      gmp-map {
+        height: 100%;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar" id="sidebar"></div>
+      <div id="map"></div>
+      <gmp-map
+        center="40.12150192260742,-100.45039367675781"
+        zoom="4"
+        map-id="DEMO_MAP_ID"
+      >
+        <gmp-advanced-marker
+          position="40.12150192260742,-100.45039367675781"
+          title="My location"
+        ></gmp-advanced-marker>
+      </gmp-map>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
