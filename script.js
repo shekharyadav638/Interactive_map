@@ -94,7 +94,6 @@ function updateSelectAllState() {
 function addMarkers(category) {
   if (!markers[category.name]) {
     markers[category.name] = category.locations.map((location) => {
-      //create icon variable and set its height and width
       var icon = {
         url: "icon.svg",
         scaledSize: new google.maps.Size(50, 50),
