@@ -18,18 +18,28 @@
   }
   
   .sidebar {
-    width: 10%;
+    width: 15%;
     background-color: #f0f0f0;
     padding: 10px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 10px
+  }
+
+  .sidebar.active{
+    display: block;
+    left: 0;
   }
   
   #map {
-    width: 90%;
-    height: 100vh;
+    width: 80%;
+    height: 80vh;
+    margin: auto;
   }
   
   .details-sidebar {
@@ -52,5 +62,39 @@
     display: flex;
     align-items: center;
     gap: 5px;
+  }
+
+  .hamburger{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+  }
+
+  .hamburger:hover{
+    cursor: pointer;
+  }
+
+  .side{
+    width: 50px;
+  }
+
+  .side.active{
+    width: 20%;
+    transition: ease-in-out 0.4s;
+  }
+
+  .swiper-container {
+    width: 250px;
+    height: 150px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #000;
+  }
+
+  .swiper-pagination {
+    bottom: 5px;
   }
   
