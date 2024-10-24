@@ -11,10 +11,31 @@ function initMap() {
   });
   infowindow = new google.maps.InfoWindow();
 
+  // Fetch data and generate sidebar
   fetch("data.json")
     .then((response) => response.json())
-    .then((data) => generateSidebar(data.categories))
+    .then((data) => {
+      generateSidebar(data.categories);
+      reopenInfowindowFromUrl(data.categories); // Reopen infowindow if marker is present in URL
+    })
     .catch((error) => console.error("Error fetching data:", error));
+}
+
+function reopenInfowindowFromUrl(categories) {
+  const urlParams = new URLSearchParams(window.location.search);
+  const markerName = urlParams.get("marker");
+
+  if (markerName) {
+    for (const category of categories) {
+      const marker = markers[category.name]?.find(
+        (m) => m.getTitle() === markerName
+      );
+      if (marker) {
+        google.maps.event.trigger(marker, "click");
+        break;
+      }
+    }
+  }
 }
 
 function generateSidebar(categories) {
@@ -24,6 +45,7 @@ function generateSidebar(categories) {
     ? urlParams.get("categories").split(",")
     : [];
 
+  // Select All Checkbox
   const selectAllLabel = document.createElement("label");
   selectAllLabel.innerHTML = `
     <input type="checkbox" id="select-all" ${
@@ -42,6 +64,7 @@ function generateSidebar(categories) {
     });
   });
 
+  // Generate category checkboxes
   categories.forEach((category) => {
     const label = document.createElement("label");
     label.innerHTML = `
@@ -75,7 +98,6 @@ function generateSidebar(categories) {
       updateMarkerCluster();
     });
 
-    // Add markers if the category is selected from the URL
     if (selectedCategories.includes(category.name)) {
       addMarkers(category);
     }
@@ -94,63 +116,25 @@ function updateSelectAllState() {
 function addMarkers(category) {
   if (!markers[category.name]) {
     markers[category.name] = category.locations.map((location) => {
-      var icon = {
-        url: "icon.svg",
-        scaledSize: new google.maps.Size(50, 50),
+      const categoryIcons = {
+        Shopping: "shopping.png",
+        Attractions: "attractions.jpeg",
+        Food: "food.png",
+        Parks: "parks.png",
+        OSL: "osl.png",
       };
 
       const marker = new google.maps.Marker({
         position: { lat: location.lat, lng: location.lon },
         title: location.name,
-        icon: icon,
+        icon: {
+          url: categoryIcons[category.name],
+          scaledSize: new google.maps.Size(50, 50),
+        },
       });
 
       marker.addListener("click", () => {
-        infowindow.close();
-        const swiperId = `swiper-${location.name.replace(/\s+/g, "-")}`;
-        const swiperHTML = `
-          <div style="width: 250px; overflow: hidden;">
-            <div class="swiper-container" id="${swiperId}">
-              <div class="swiper-wrapper">
-                ${location.images
-                  .map(
-                    (src) => `
-                      <div class="swiper-slide">
-                        <img src="${src}" style="width: 100%; height: 150px; object-fit: cover;" />
-                      </div>
-                    `
-                  )
-                  .join("")}
-              </div>
-              <div class="swiper-pagination"></div>
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
-            </div>
-            <h1>${location.name}</h1>
-            <p>${location.info}</p>
-          </div>
-        `;
-
-        infowindow.setContent(swiperHTML);
-        infowindow.open({
-          anchor: marker,
-          map,
-        });
-
-        google.maps.event.addListenerOnce(infowindow, "domready", () => {
-          new Swiper(`#${swiperId}`, {
-            loop: true,
-            navigation: {
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
-            },
-          });
-        });
-
-        map.panTo(marker.getPosition());
-        setTimeout(() => {
-          map.setZoom(13);
-        }, 500);
+        openInfowindow(marker, location);
       });
 
       allMarkers.push(marker);
@@ -159,6 +143,63 @@ function addMarkers(category) {
   }
 
   markers[category.name].forEach((marker) => marker.setMap(map));
+}
+
+function openInfowindow(marker, location) {
+  infowindow.close(); // Close previous infowindow
+
+  const swiperId = `swiper-${location.name.replace(/\s+/g, "-")}`;
+  const swiperHTML = `
+    <div style="width: 250px; overflow: hidden;">
+      <div class="swiper-container" id="${swiperId}">
+        <div class="swiper-wrapper">
+          ${location.images
+            .map(
+              (src) => `
+                <div class="swiper-slide">
+                  <img src="${src}" style="width: 100%; height: 150px; object-fit: cover;" />
+                </div>
+              `
+            )
+            .join("")}
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      <h1>${location.name}</h1>
+      <p>${location.info}</p>
+    </div>
+  `;
+
+  infowindow.setContent(swiperHTML);
+  infowindow.open({
+    anchor: marker,
+    map,
+  });
+
+  // Update the URL with the marker's name
+  const params = new URLSearchParams(window.location.search);
+  params.set("marker", marker.getTitle());
+  const newUrl = `${window.location.origin}${window.location.pathname}?${params}`;
+  window.history.replaceState({}, "", newUrl);
+
+  google.maps.event.addListenerOnce(infowindow, "domready", () => {
+    new Swiper(`#${swiperId}`, {
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  });
+
+  google.maps.event.addListener(map, "click", () => {
+    infowindow.close();
+    map.setZoom(12);
+  });
+
+  map.panTo(marker.getPosition());
+  setTimeout(() => map.setZoom(13), 500);
 }
 
 function removeMarkers(categoryName) {
@@ -182,10 +223,16 @@ function updateMarkerCluster() {
   });
 }
 
+// Close the infowindow and clear the marker state from the URL
 document.addEventListener("click", (event) => {
   if (!event.target.closest(".gm-style")) {
     infowindow.close();
     map.setZoom(12);
+
+    const params = new URLSearchParams(window.location.search);
+    params.delete("marker");
+    const newUrl = `${window.location.origin}${window.location.pathname}?${params}`;
+    window.history.replaceState({}, "", newUrl);
   }
 });
 
@@ -195,6 +242,5 @@ const side = document.getElementById("side");
 
 hamburger.addEventListener("click", () => {
   sidebar.classList.toggle("active");
-  hamburger.classList.toggle("active");
   side.classList.toggle("active");
 });
