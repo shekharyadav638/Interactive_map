@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Maps from "./components/Maps";
+import Sidebar from "./components/Sidebar";
 
 function App() {
+  const [selectedCategory, setSelectedCategory] = useState([]);
+  const [marker, setMarker] = useState(null);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Sidebar
+        selectedCategory={selectedCategory}
+        setSelectedCategory={setSelectedCategory}
+      />
+      <Maps
+        marker={marker}
+        setMarker={setMarker}
+        selectedCategory={selectedCategory}
+      />
+    </>
   );
 }
 

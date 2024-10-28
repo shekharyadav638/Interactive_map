@@ -1,0 +1,318 @@
+{
+    "categories": [
+      {
+        "name": "Shopping",
+        "locations": [
+          {
+            "name": "Mall of India",
+            "lat": 28.5672,
+            "lon": 77.3206,
+            "info": "Largest mall in India.",
+            "images": [
+                "mall.jpeg",
+                "image2.jpeg",
+                "image3.jpeg",
+                "image4.jpeg"
+            ]
+          },
+          {
+            "name": "Dilli Haat",
+            "lat": 28.5686,
+            "lon": 77.2067,
+            "info": "Cultural shopping destination.",
+             "images": [
+                "mall.jpeg",
+                "image2.jpeg",
+                "image3.jpeg",
+                "image4.jpeg"
+            ]
+          },
+            {
+                "name": "Sarojini Nagar Market",
+                "lat": 28.5748,
+                "lon": 77.2044,
+                "info": "Famous street market.",
+                 "images": [
+                "mall.jpeg",
+                "image2.jpeg",
+                "image3.jpeg",
+                "image4.jpeg"
+            ]
+            },
+            {
+                "name": "Connaught Place",
+                "lat": 28.6315,
+                "lon": 77.2167,
+                "info": "Popular shopping destination.",
+                 "images": [
+                "mall.jpeg",
+                "image2.jpeg",
+                "image3.jpeg",
+                "image4.jpeg"
+            ]
+            },
+            {
+                "name": "Chandni Chowk",
+                "lat": 28.6506,
+                "lon": 77.2305,
+                "info": "Oldest market in Delhi.",
+                 "images": [
+                "mall.jpeg",
+                "image2.jpeg",
+                "image3.jpeg",
+                "image4.jpeg"
+            ]
+            },
+            {
+                "name": "Lajpat Nagar",
+                "lat": 28.5677,
+                "lon": 77.2410,
+                "info": "Famous for clothes and accessories.",
+                 "images": [
+                "mall.jpeg",
+                "image2.jpeg",
+                "image3.jpeg",
+                "image4.jpeg"
+            ]
+            },
+            {
+                "name": "Khan Market",
+                "lat": 28.6006,
+                "lon": 77.2270,
+                "info": "High-end shopping destination.",
+                 "images": [
+                "mall.jpeg",
+                "image2.jpeg",
+                "image3.jpeg",
+                "image4.jpeg"
+            ]
+            },
+            {
+                "name": "Karol Bagh",
+                "lat": 28.6526,
+                "lon": 77.1896,
+                "info": "Famous for bridal wear.",
+                 "images": [
+                "mall.jpeg",
+                "image2.jpeg",
+                "image3.jpeg",
+                "image4.jpeg"
+            ]
+            }
+        ]
+      },
+      {
+        "name": "Attractions",
+        "locations": [
+          {
+            "name": "India Gate",
+            "lat": 28.6129,
+            "lon": 77.2295,
+            "info": "War memorial.",
+             "images": [
+                "mall.jpeg",
+                "image2.jpeg",
+                "image3.jpeg",
+                "image4.jpeg"
+            ]
+          },
+            {
+                "name": "Qutub Minar",
+                "lat": 28.5245,
+                "lon": 77.1855,
+                "info": "Tallest brick minaret.",
+                 "images": [
+                "mall.jpeg",
+                "image2.jpeg",
+                "image3.jpeg",
+                "image4.jpeg"
+            ]
+            },
+            {
+                "name": "Red Fort",
+                "lat": 28.6562,
+                "lon": 77.2410,
+                "info": "Historic fort.",
+                 "images": [
+                "mall.jpeg",
+                "image2.jpeg",
+                "image3.jpeg",
+                "image4.jpeg"
+            ]
+            },
+            {
+                "name": "Lotus Temple",
+                "lat": 28.5535,
+                "lon": 77.2588,
+                "info": "Bahá'í House of Worship.",
+                 "images": [
+                "mall.jpeg",
+                "image2.jpeg",
+                "image3.jpeg",
+                "image4.jpeg"
+            ]
+            },
+            {
+                "name": "Akshardham Temple",
+                "lat": 28.6127,
+                "lon": 77.2773,
+                "info": "Hindu temple.",
+                 "images": [
+                "mall.jpeg",
+                "image2.jpeg",
+                "image3.jpeg",
+                "image4.jpeg"
+            ]
+            }
+        ]
+      },
+        {
+            "name": "Food",
+            "locations": [
+            {
+                "name": "Indian Accent",
+                "lat": 28.5917,
+                "lon": 77.2263,
+                "info": "Fine dining restaurant.",
+                 "images": [
+                "mall.jpeg",
+                "image2.jpeg",
+                "image3.jpeg",
+                "image4.jpeg"
+            ]
+            },
+                {
+                    "name": "Karim's",
+                    "lat": 28.6495,
+                    "lon": 77.2334,
+                    "info": "Famous for Mughlai cuisine.",
+                     "images": [
+                "mall.jpeg",
+                "image2.jpeg",
+                "image3.jpeg",
+                "image4.jpeg"
+            ]
+                },
+                {
+                    "name": "Pandara Road",
+                    "lat": 28.6075,
+                    "lon": 77.2334,
+                    "info": "Famous for North Indian food.",
+                     "images": [
+                "mall.jpeg",
+                "image2.jpeg",
+                "image3.jpeg",
+                "image4.jpeg"
+            ]
+                },
+                {
+                    "name": "Saravana Bhavan",
+                    "lat": 28.6325,
+                    "lon": 77.2202,
+                    "info": "South Indian restaurant.",
+                     "images": [
+                "mall.jpeg",
+                "image2.jpeg",
+                "image3.jpeg",
+                "image4.jpeg"
+            ]
+                },
+                {
+                    "name": "Kake Di Hatti",
+                    "lat": 28.6583,
+                    "lon": 77.2300,
+                    "info": "Famous for North Indian food.",
+                     "images": [
+                "mall.jpeg",
+                "image2.jpeg",
+                "image3.jpeg",
+                "image4.jpeg"
+            ]
+                }
+            ]
+        },
+        {
+            "name": "Parks",
+            "locations": [
+            {
+                "name": "Lodhi Garden",
+                "lat": 28.5930,
+                "lon": 77.2197,
+                "info": "Historic park.",
+                 "images": [
+                "mall.jpeg",
+                "image2.jpeg",
+                "image3.jpeg",
+                "image4.jpeg"
+            ]
+            },
+                {
+                    "name": "Deer Park",
+                    "lat": 28.6096,
+                    "lon": 77.2023,
+                    "info": "Park with deer.",
+                     "images": [
+                "mall.jpeg",
+                "image2.jpeg",
+                "image3.jpeg",
+                "image4.jpeg"
+            ]
+                },
+                {
+                    "name": "Garden of Five Senses",
+                    "lat": 28.5133,
+                    "lon": 77.1986,
+                    "info": "Park with sculptures.",
+                     "images": [
+                "mall.jpeg",
+                "image2.jpeg",
+                "image3.jpeg",
+                "image4.jpeg"
+            ]
+                },
+                {
+                    "name": "Nehru Park",
+                    "lat": 28.5946,
+                    "lon": 77.2110,
+                    "info": "Park with amphitheatre.",
+                     "images": [
+                "mall.jpeg",
+                "image2.jpeg",
+                "image3.jpeg",
+                "image4.jpeg"
+            ]
+                },
+                {
+                    "name": "Central Park",
+                    "lat": 28.6315,
+                    "lon": 77.2167,
+                    "info": "Park with jogging track.",
+                     "images": [
+                "mall.jpeg",
+                "image2.jpeg",
+                "image3.jpeg",
+                "image4.jpeg"
+            ]
+                }
+            ]
+        },
+        {
+            "name":"OSL",
+            "locations": [
+            {
+                "name": "Opensense Labs",
+                "lat": 28.518172,
+                "lon": 77.198908,
+                "info": "Drupal Development Company.",
+                 "images": [
+                "mall.jpeg",
+                "image2.jpeg",
+                "image3.jpeg",
+                "image4.jpeg"
+            ]
+            }
+            ]
+        }
+    ]
+  }
+  
