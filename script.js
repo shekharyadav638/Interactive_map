@@ -11,12 +11,11 @@ function initMap() {
   });
   infowindow = new google.maps.InfoWindow();
 
-  // Fetch data and generate sidebar
   fetch("data.json")
     .then((response) => response.json())
     .then((data) => {
       generateSidebar(data.categories);
-      reopenInfowindowFromUrl(data.categories); // Reopen infowindow if marker is present in URL
+      reopenInfowindowFromUrl(data.categories);
     })
     .catch((error) => console.error("Error fetching data:", error));
 }
@@ -64,7 +63,6 @@ function generateSidebar(categories) {
     });
   });
 
-  // Generate category checkboxes
   categories.forEach((category) => {
     const label = document.createElement("label");
     label.innerHTML = `
@@ -74,7 +72,6 @@ function generateSidebar(categories) {
       ${category.name}
     `;
     sidebar.appendChild(label);
-
     const checkbox = label.querySelector("input");
 
     checkbox.addEventListener("change", (e) => {
@@ -223,7 +220,7 @@ function updateMarkerCluster() {
   });
 }
 
-// Close the infowindow and clear the marker state from the URL
+// Close the infowindow and clear the marker from the URL
 document.addEventListener("click", (event) => {
   if (!event.target.closest(".gm-style")) {
     infowindow.close();
